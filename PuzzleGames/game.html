@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<h1>Log</h1>
+<div id="log">Logger</div>
+
+<a href=""
+   onclick="runAction(':SOLVE'); return false;"
+>Solve</a>
+
+<form>
+    <label for="action">Action: </label>
+    <input type="text" id="action-input" name="action"/>
+    <br>
+    <a href=""
+       onclick="runAction(document.getElementById('action-input').value); return false;">
+        Submit Action
+    </a>
+</form>
+
+<script>
+    function updateLog() {
+        var log = document.getElementById('log');
+        log.innerHTML = log.innerHTML + '<br>' + this.responseText + '<br>';
+    }
+
+    function runAction(action) {
+        var rq = new XMLHttpRequest();
+        rq.onload = updateLog;
+        rq.open('get', 'actions?action=' + action, true);
+        rq.send();
+    }
+</script>
+</body>
+</html>

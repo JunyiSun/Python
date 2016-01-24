@@ -1,0 +1,12 @@
+0 Arrive James 7
+1 Arrive Jack 8
+2 Arrive Janice 8
+7 Arrive Tara 8
+4 Arrive Simone 8
+5 Arrive Elena 7
+6 Arrive Tom 8
+3 Arrive Wang 8
+8 Close 0
+9 Arrive Jerry 7
+10 Arrive Marry 7
+11 Close 3
